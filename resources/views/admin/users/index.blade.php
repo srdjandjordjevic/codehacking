@@ -3,6 +3,20 @@
 
 @section('content')
 
+
+	@if(Session::has('deleted'))
+		
+			<p class="bg-danger">{{session('deleted')}}</p>
+		
+		@endif
+		
+	@if(Session::has('updated'))
+		
+			<p class="bg-success">{{session('updated')}}</p>
+		
+		@endif
+	
+
 	<h1>Users</h1>
 
 	<table class="table">
